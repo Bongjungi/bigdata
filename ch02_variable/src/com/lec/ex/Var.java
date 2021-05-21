@@ -1,13 +1,13 @@
 package com.lec.ex;
 
 public class Var {
-	public static int i=10; //int-4byteÂ¥¸® Á¤¼ö°ø°£
-	public static byte j=20; //byte-8bitÂ¥¸® Á¤¼ö°ø°£
-	public static double h=1; //double-8byteÂ¥¸® ½Ç¼ö°ø°£                         int cnt=h ºÒ°¡´É - 8¹ÙÀÌÆ® ´õºíÀÌ 4¹ÙÀÌÆ® ÀÎÆ®¾È¿¡ ¸øµé¾î°¨.
-	public static char c='³ª'; //char-2byteÂ¥¸® ¹®ÀÚ°ø°£
-	public static boolean b=true; //boolean-1byteÂ¥¸® Æ®·çÆú½º°ø°£
-	public static long l=2200000000L; //LÀ» ¾²´Â ÀÌÀ¯´Â ±âº»ÀûÀ¸·Î int°ªÀ¸·Î ÀÎ½ÄÇØ¼­ long°ªÀ¸·Î ÀÎ½ÄÇÏ±â À§ÇØ
-	public static float f=3.14159265359f; //f¸¦ ¾²´Â ÀÌÀ¯: ±âº»ÀûÀ¸·Î double·Î ÀÎ½ÄÇØ¼­ float·Î ÀÎ½Ä½ÃÅ°±â À§ÇØ
+	public static int i=10; //int-4byteì§œë¦¬ ì •ìˆ˜ê³µê°„
+	public static byte j=20; //byte-8bitì§œë¦¬ ì •ìˆ˜ê³µê°„
+	public static double h=1; //double-8byteì§œë¦¬ ì‹¤ìˆ˜ê³µê°„                         int cnt=h ë¶ˆê°€ëŠ¥ - 8ë°”ì´íŠ¸ ë”ë¸”ì´ 4ë°”ì´íŠ¸ ì¸íŠ¸ì•ˆì— ëª»ë“¤ì–´ê°.
+	public static char c='ë‚˜'; //char-2byteì§œë¦¬ ë¬¸ìê³µê°„
+	public static boolean b=true; //boolean-1byteì§œë¦¬ íŠ¸ë£¨í´ìŠ¤ê³µê°„
+	public static long l=2200000000L; //Lì„ ì“°ëŠ” ì´ìœ ëŠ” ê¸°ë³¸ì ìœ¼ë¡œ intê°’ìœ¼ë¡œ ì¸ì‹í•´ì„œ longê°’ìœ¼ë¡œ ì¸ì‹í•˜ê¸° ìœ„í•´
+	public static float f=3.14159265359f; //fë¥¼ ì“°ëŠ” ì´ìœ : ê¸°ë³¸ì ìœ¼ë¡œ doubleë¡œ ì¸ì‹í•´ì„œ floatë¡œ ì¸ì‹ì‹œí‚¤ê¸° ìœ„í•´
 	public static double g=3.1415926359;
-	public static String s="³ª³ª³ª";
+	public static String s="ë‚˜ë‚˜ë‚˜"; //Stringì€ í´ë˜ìŠ¤ì´ë‹¤.
 }
