@@ -1,74 +1,74 @@
---FROM -WHERE-GROUP BY -HANING -SELECT -ORDER BY ¼ø ½ÇÇà
---ROLLBACK - DML Ãë¼Ò
---COMMIT - DML Àû¿ë
+--FROM -WHERE-GROUP BY -HANING -SELECT -ORDER BY ìˆœ ì‹¤í–‰
+--ROLLBACK - DML ì·¨ì†Œ
+--COMMIT - DML ì ìš©
 -- SELECT 1+1 FROM DUAL;
--- SELECT (DISTINCT) (º°Äª1).ÇÊµå1 (AS ÇÊµåº°Äª), NVL(12*ÇÊµå2,0), SUM(ÇÊµå),  ... 
-   -- FROM Å×ÀÌºí1 (º°Äª1), Å×ÀÌºí2 (º°Äª2),...
-   -- WHERE Á¶ÀÎÁ¶°Ç1(º°Äª1.ÇÊµå=º°Äª2.ÇÊµå(+)), Á¶°Ç AND (BETWEEN 1 AND 2) OR IN(10,20) 
-   -- AND LIKE '%M%' OR LIKE '_M_' AND ÇÊµå IS NOT NULL
-   -- GROUP BY ÇÊµå
-   -- HAVING Á¶°Ç
-   -- ORDER BY ÇÊµå ASC, ÇÊµå DESC;
---ALTER SESSION SET NLS_DATE_FORMAT = 'MM-DD-RR';            --½Ã½ºÅÛ ³¯Â¥ Çü½Ä º¯°æ
---SELECT ENAME ||' Àº(´Â) '|| JOB ||' ÀÌ´Ù.' "EMPLOYEES" FROM EMP; -- ¿¬°á¿¬»êÀÚ '||'
+-- SELECT (DISTINCT) (ë³„ì¹­1).í•„ë“œ1 (AS í•„ë“œë³„ì¹­), NVL(12*í•„ë“œ2,0), SUM(í•„ë“œ),  ... 
+   -- FROM í…Œì´ë¸”1 (ë³„ì¹­1), í…Œì´ë¸”2 (ë³„ì¹­2),...
+   -- WHERE ì¡°ì¸ì¡°ê±´1(ë³„ì¹­1.í•„ë“œ=ë³„ì¹­2.í•„ë“œ(+)), ì¡°ê±´ AND (BETWEEN 1 AND 2) OR IN(10,20) 
+   -- AND LIKE '%M%' OR LIKE '_M_' AND í•„ë“œ IS NOT NULL
+   -- GROUP BY í•„ë“œ
+   -- HAVING ì¡°ê±´
+   -- ORDER BY í•„ë“œ ASC, í•„ë“œ DESC;
+--ALTER SESSION SET NLS_DATE_FORMAT = 'MM-DD-RR';            --ì‹œìŠ¤í…œ ë‚ ì§œ í˜•ì‹ ë³€ê²½
+--SELECT ENAME ||' ì€(ëŠ”) '|| JOB ||' ì´ë‹¤.' "EMPLOYEES" FROM EMP; -- ì—°ê²°ì—°ì‚°ìž '||'
 
---4.´ÜÀÏÇàÇÔ¼ö, 5. ±×·ìÇÔ¼ö ÂüÁ¶
+--4.ë‹¨ì¼í–‰í•¨ìˆ˜, 5. ê·¸ë£¹í•¨ìˆ˜ ì°¸ì¡°
 
--- SELECT ÇÊµå¸í ... FROM ... WHERE ÇÊµå¸í =,>,!= (SELECT ÇÊµå¸í FROM Å×ÀÌºí WHERE Á¶°Ç); - ´ÜÀÏÇà¼­ºêÄõ¸®
--- SELECT ÇÊµå¸í ... FROM ... WHERE (ÇÊµå¸í1, ÇÊµå¸í2) = (SELECT (ÇÊµå¸í1, ÇÊµå¸í2) FROM Å×ÀÌºí WHERE Á¶°Ç);
--- SELECT ÇÊµå¸í ... FROM ... WHERE ÇÊµå¸í IN(-¾È¿¡ÀÖ´ÂÁö),ALL(-ÀüºÎ¸¸Á·ÇÏ´ÂÁö),ANY(-ÇÏ³ª¶óµµ¸¸Á·ÇÏ´ÂÁö),SOME(-ANY) (SELECT ÇÊµå¸í FROM Å×ÀÌºí WHERE Á¶°Ç); -´ÙÁßÇà¼­ºêÄõ¸®
--- SELECT ÇÊµå¸í ... FROM ... WHERE EXISTS(-³»¿ëÀÌ TRUEÀÎ°ÍÀÌ Á¸ÀçÇÏ´ÂÁö) (SELECT ÇÊµå¸í FROM Å×ÀÌºí WHERE Á¶°Ç);
+-- SELECT í•„ë“œëª… ... FROM ... WHERE í•„ë“œëª… =,>,!= (SELECT í•„ë“œëª… FROM í…Œì´ë¸” WHERE ì¡°ê±´); - ë‹¨ì¼í–‰ì„œë¸Œì¿¼ë¦¬
+-- SELECT í•„ë“œëª… ... FROM ... WHERE (í•„ë“œëª…1, í•„ë“œëª…2) = (SELECT (í•„ë“œëª…1, í•„ë“œëª…2) FROM í…Œì´ë¸” WHERE ì¡°ê±´);
+-- SELECT í•„ë“œëª… ... FROM ... WHERE í•„ë“œëª… IN(-ì•ˆì—ìžˆëŠ”ì§€),ALL(-ì „ë¶€ë§Œì¡±í•˜ëŠ”ì§€),ANY(-í•˜ë‚˜ë¼ë„ë§Œì¡±í•˜ëŠ”ì§€),SOME(-ANY) (SELECT í•„ë“œëª… FROM í…Œì´ë¸” WHERE ì¡°ê±´); -ë‹¤ì¤‘í–‰ì„œë¸Œì¿¼ë¦¬
+-- SELECT í•„ë“œëª… ... FROM ... WHERE EXISTS(-ë‚´ìš©ì´ TRUEì¸ê²ƒì´ ì¡´ìž¬í•˜ëŠ”ì§€) (SELECT í•„ë“œëª… FROM í…Œì´ë¸” WHERE ì¡°ê±´);
 
 
 --------------------------------------------------------------------------------------------------------------------------------
--- DDL(Å×ÀÌºí »ý¼º, Å×ÀÌºí »èÁ¦, Å×ÀÌºí±¸Á¶º¯°æ, Å×ÀÌºí ¸ðµç µ¥ÀÌÅÍ Á¦°Å)
--- DML(SELECT, INSERT, UPDATE, DELETE) - ½ÇÇàÃë¼Ò °¡´É
--- DCL(»ç¿ëÀÚ°èÁ¤»ý¼º, »ç¿ëÀÚ¿¡°Ô ±ÇÇÑºÎ¿©, ±ÇÇÑ¹ÚÅ», »ç¿ëÀÚ°èÁ¤»èÁ¦, Æ®·¢Àè¼Ç ¸í·É¾î)
--- EXERD »¡°£»ö È­»ìÇ¥´Â ±âº»Å°ÇÊµå¸¦ ´Ù¸¥ Å×ÀÌºí¿¡ »ó¼Ó½ÃÅ³¶§,
---      ÆÄ¶õ»ö È­»ìÇ¥´Â »õ·Î¿î ÇÊµå¸¦ ¸¸µé¾î °ü°è¸¦ »õ·Î ¸¸µç´Ù.
+-- DDL(í…Œì´ë¸” ìƒì„±, í…Œì´ë¸” ì‚­ì œ, í…Œì´ë¸”êµ¬ì¡°ë³€ê²½, í…Œì´ë¸” ëª¨ë“  ë°ì´í„° ì œê±°)
+-- DML(SELECT, INSERT, UPDATE, DELETE) - ì‹¤í–‰ì·¨ì†Œ ê°€ëŠ¥
+-- DCL(ì‚¬ìš©ìžê³„ì •ìƒì„±, ì‚¬ìš©ìžì—ê²Œ ê¶Œí•œë¶€ì—¬, ê¶Œí•œë°•íƒˆ, ì‚¬ìš©ìžê³„ì •ì‚­ì œ, íŠ¸ëž™ìž­ì…˜ ëª…ë ¹ì–´)
+-- EXERD ë¹¨ê°„ìƒ‰ í™”ì‚´í‘œëŠ” ê¸°ë³¸í‚¤í•„ë“œë¥¼ ë‹¤ë¥¸ í…Œì´ë¸”ì— ìƒì†ì‹œí‚¬ë•Œ,
+--      íŒŒëž€ìƒ‰ í™”ì‚´í‘œëŠ” ìƒˆë¡œìš´ í•„ë“œë¥¼ ë§Œë“¤ì–´ ê´€ê³„ë¥¼ ìƒˆë¡œ ë§Œë“ ë‹¤.
 
---CREATE TABLE Å×ÀÌºí¸í ( ±¸¼º ÇüÅÂ Á¶°Ç, ±¸¼º ÇüÅÂ Á¶°Ç,...);
---ALTER Å×ÀÌºí¸í ADD ±¸¼º ÇüÅÂ Á¶°Ç                (±¸¼º Ãß°¡)
---ALTER Å×ÀÌºí¸í MODIFY ±¸¼º ÇüÅÂ                 (ÇüÅÂ º¯È¯)
---ALTER Å×ÀÌºí¸í DROP COLUMN ÇÊµå¸í                (ÇÊµå »èÁ¦)
---ALTER Å×ÀÌºí¸í SET UNUSED ÇÊµå¸í                 (ÀÌ¿ë ºÒ°¡)
---ALTER Å×ÀÌºí¸í DROP UNUSED COLUMNS              (ÀÌ¿ë ºÒ°¡ ÇÊµå »èÁ¦)
---DROP TABLE Å×ÀÌºí¸í                                   (Å×ÀÌºí »èÁ¦)
---TRUNCATE TABLE Å×ÀÌºí¸í                                (Å×ÀÌºí ³»ÀÇ ÇÊµå »èÁ¦)
---RENAME Å×ÀÌºí¸í1 TO Å×ÀÌºí¸í2                   (Å×ÀÌºí¸í1À» Å×ÀÌºí¸í2·Î ÀÌ¸§ ¹Ù²Þ)
+--CREATE TABLE í…Œì´ë¸”ëª… ( êµ¬ì„± í˜•íƒœ ì¡°ê±´, êµ¬ì„± í˜•íƒœ ì¡°ê±´,...);
+--ALTER TABLE í…Œì´ë¸”ëª… ADD êµ¬ì„± í˜•íƒœ ì¡°ê±´                (êµ¬ì„± ì¶”ê°€)
+--ALTER TABLE í…Œì´ë¸”ëª… MODIFY êµ¬ì„± í˜•íƒœ                 (í˜•íƒœ ë³€í™˜)
+--ALTER TABLE í…Œì´ë¸”ëª… DROP COLUMN í•„ë“œëª…                (í•„ë“œ ì‚­ì œ)
+--ALTER TABLE í…Œì´ë¸”ëª… SET UNUSED í•„ë“œëª…                 (ì´ìš© ë¶ˆê°€)
+--ALTER TABLE í…Œì´ë¸”ëª… DROP UNUSED COLUMNS              (ì´ìš© ë¶ˆê°€ í•„ë“œ ì‚­ì œ)
+--DROP TABLE í…Œì´ë¸”ëª…                                   (í…Œì´ë¸” ì‚­ì œ)
+--TRUNCATE TABLE í…Œì´ë¸”ëª…                                (í…Œì´ë¸” ë‚´ì˜ í•„ë“œ ì‚­ì œ)
+--RENAME í…Œì´ë¸”ëª…1 TO í…Œì´ë¸”ëª…2                   (í…Œì´ë¸”ëª…1ì„ í…Œì´ë¸”ëª…2ë¡œ ì´ë¦„ ë°”ê¿ˆ)
 
---INSERT INTO Å×ÀÌºí¸í ( ±¸¼º ) VALUE (°ª)
---INSERT INTO Å×ÀÌºí¸í (¼­ºêÄõ¸®)
---UPDATE Å×ÀÌºí¸í SET ¿øÇÏ´Â¹Ù WHERE º¯°æÇÒ ÇÊµåÀÇ Á¶°Ç
---SELECT ±¸¼º FROM Å×ÀÌºí¸í WHERE Á¶°Ç
---DELETE FROM Å×ÀÌºí¸í WHERE Á¶°Ç
+--INSERT INTO í…Œì´ë¸”ëª… ( êµ¬ì„± ) VALUE (ê°’)
+--INSERT INTO í…Œì´ë¸”ëª… (ì„œë¸Œì¿¼ë¦¬)
+--UPDATE í…Œì´ë¸”ëª… SET ì›í•˜ëŠ”ë°” WHERE ë³€ê²½í•  í•„ë“œì˜ ì¡°ê±´
+--SELECT êµ¬ì„± FROM í…Œì´ë¸”ëª… WHERE ì¡°ê±´
+--DELETE FROM í…Œì´ë¸”ëª… WHERE ì¡°ê±´
 
--- µ¥ÀÌÅÍ µñ¼Å³Ê¸®(»ç¿ëÀÚ Á¢±Ù ºÒ°¡) VS µ¥ÀÌÅÍ µñ¼Å³Ê¸® ºä(»ç¿ëÀÚ Á¢±Ù °¡´É)
--- ºäÀÇ Á¾·ù
--- USER_XXX : Çö °èÁ¤ÀÌ ¼ÒÀ¯ÇÏ°í ÀÖ´Â °´Ã¼(Å×ÀÌºí, ºä, ÀÎµ¦½º, Á¦¾àÁ¶°Ç...)
+-- ë°ì´í„° ë”•ì…”ë„ˆë¦¬(ì‚¬ìš©ìž ì ‘ê·¼ ë¶ˆê°€) VS ë°ì´í„° ë”•ì…”ë„ˆë¦¬ ë·°(ì‚¬ìš©ìž ì ‘ê·¼ ê°€ëŠ¥)
+-- ë·°ì˜ ì¢…ë¥˜
+-- USER_XXX : í˜„ ê³„ì •ì´ ì†Œìœ í•˜ê³  ìžˆëŠ” ê°ì²´(í…Œì´ë¸”, ë·°, ì¸ë±ìŠ¤, ì œì•½ì¡°ê±´...)
     -- USER_TABLES, USER_INDEXS, USER_CONSTRAINTS, USER_VIEWS
--- ALL_XXX : Çö °èÁ¤ÀÌ Á¢±Ù °¡´ÉÇÑ °´Ã¼
+-- ALL_XXX : í˜„ ê³„ì •ì´ ì ‘ê·¼ ê°€ëŠ¥í•œ ê°ì²´
     -- ALL_TABLES, ALL_INDEXS, ALL_CONSTRAINTS, ALL_VIEWS
--- DBA_XXX : DBA(EX. scott)¸¸ Á¢±Ù°¡´É. DBMSÀÇ ¸ðµç °´Ã¼
+-- DBA_XXX : DBA(EX. scott)ë§Œ ì ‘ê·¼ê°€ëŠ¥. DBMSì˜ ëª¨ë“  ê°ì²´
     -- DBA_TABLES, DBA_INDEXES, DBA_CONSTRAINTS, DBA_VIEWS
---SELECT * FROM USER_TABLE                  (³» °èÁ¤ÀÌ ¼ÒÀ¯ÇÑ Å×ÀÌºí °´Ã¼)
---SELECT * FROM ALL_INDEXS                   (³»°¡ Á¢±Ù°¡´ÉÇÑ ÀÎµ¦½º °´Ã¼)
---SELECT * FROM DBA_CONSTRAINTS                   (DBA°¡ ¼ÒÀ¯ÇÑ Á¦¾àÁ¶°Çµé)
+--SELECT * FROM USER_TABLE                  (ë‚´ ê³„ì •ì´ ì†Œìœ í•œ í…Œì´ë¸” ê°ì²´)
+--SELECT * FROM ALL_INDEXS                   (ë‚´ê°€ ì ‘ê·¼ê°€ëŠ¥í•œ ì¸ë±ìŠ¤ ê°ì²´)
+--SELECT * FROM DBA_CONSTRAINTS                   (DBAê°€ ì†Œìœ í•œ ì œì•½ì¡°ê±´ë“¤)
 
---CREATE USER smith IDENTIFIED BY tiger;      -- smith °èÁ¤ »ý¼º
--- ±ÇÇÑ ºÎ¿©(¼¼¼Ç±ÇÇÑ, scott.emp, scott.dept¿¡ ´ëÇÑ ¸ðµç ±ÇÇÑ)
+--CREATE USER smith IDENTIFIED BY tiger;      -- smith ê³„ì • ìƒì„±
+-- ê¶Œí•œ ë¶€ì—¬(ì„¸ì…˜ê¶Œí•œ, scott.emp, scott.deptì— ëŒ€í•œ ëª¨ë“  ê¶Œí•œ)
 --GRANT CREATE SESSION TO smith; -- GRANT DBA TO scott;
---GRANT ALL ON EMP TO smith; -- ³» °èÁ¤¿¡ EMPÅ×ÀÌºí¿¡ ´ëÇÑ ¸ðµç ±ÇÇÑ ºÎ¿©(ALLÀÌ ¾Æ´Ñ SELECT¸é, SELECT ±ÇÇÑ¸¸ ºÎ¿©)
--- ±ÇÇÑ ¹ÚÅ»( ±ÇÇÑ ¹ÚÅ»ÇÒ ID°¡ Á¢¼ÓÇØÁ¦ Áß)
--- REVOKE ALL ON EMP FROM smith; -- ³» °èÁ¤ÀÇ EMP Å×ÀÌºí¿¡ ´ëÇÑ ¸ðµç ±ÇÇÑ ¹ÚÅ»(SMITH°èÁ¤ÀÌ Á¢¼Ó ÇØÁ¦ µÇ¾î ÀÖ¾î¾ß ÇÔ.)
+--GRANT ALL ON EMP TO smith; -- ë‚´ ê³„ì •ì— EMPí…Œì´ë¸”ì— ëŒ€í•œ ëª¨ë“  ê¶Œí•œ ë¶€ì—¬(ALLì´ ì•„ë‹Œ SELECTë©´, SELECT ê¶Œí•œë§Œ ë¶€ì—¬)
+-- ê¶Œí•œ ë°•íƒˆ( ê¶Œí•œ ë°•íƒˆí•  IDê°€ ì ‘ì†í•´ì œ ì¤‘)
+-- REVOKE ALL ON EMP FROM smith; -- ë‚´ ê³„ì •ì˜ EMP í…Œì´ë¸”ì— ëŒ€í•œ ëª¨ë“  ê¶Œí•œ ë°•íƒˆ(SMITHê³„ì •ì´ ì ‘ì† í•´ì œ ë˜ì–´ ìžˆì–´ì•¼ í•¨.)
 -- DROP USER smith CASCADE;
--- Á¦¾àÁ¶°Ç
---(1) PRIMARY KEY : À¯ÀÏÇÏ°Ô Å×ÀÌºíÀÇ °¢ ÇàÀ» ½Äº°.
---(2) NOT NULL : NULL°ªÀ» Æ÷ÇÔÇÏÁö ¾ÊÀ½.
---(3) UNIQUE : ¸ðµç Çà¿¡ ´ëÇØ À¯ÀÏÇØ¾ß ÇÏ¸ç NULL°ªÀ» Çã¿ë.
---(4) FOREIGN KEY : Å×ÀÌºíÀÇ ¿­Àº ´Ù¸¥ Å×ÀÌºíÀÇ ¿­À» ÂüÁ¶.
---(5) CHECK(Á¶°Ç) : ÇØ´ç Á¶°ÇÀÌ ¸¸Á·.
---(6) DEFAULT : ±âº»°ª ¼³Á¤.
+-- ì œì•½ì¡°ê±´
+--(1) PRIMARY KEY : ìœ ì¼í•˜ê²Œ í…Œì´ë¸”ì˜ ê° í–‰ì„ ì‹ë³„.
+--(2) NOT NULL : NULLê°’ì„ í¬í•¨í•˜ì§€ ì•ŠìŒ.
+--(3) UNIQUE : ëª¨ë“  í–‰ì— ëŒ€í•´ ìœ ì¼í•´ì•¼ í•˜ë©° NULLê°’ì„ í—ˆìš©.
+--(4) FOREIGN KEY : í…Œì´ë¸”ì˜ ì—´ì€ ë‹¤ë¥¸ í…Œì´ë¸”ì˜ ì—´ì„ ì°¸ì¡°.
+--(5) CHECK(ì¡°ê±´) : í•´ë‹¹ ì¡°ê±´ì´ ë§Œì¡±.
+--(6) DEFAULT : ê¸°ë³¸ê°’ ì„¤ì •.
 -----------------------------------------------------------------------------------------------------------------
 --[SUQUENCE]--
 
@@ -78,28 +78,28 @@
 -- [CYCLE|NOCYCLE]
 -- [CACHE n| NOCACHE];
 
--- DROP SEQUENCE sequence_name;    (»èÁ¦)
+-- DROP SEQUENCE sequence_name;    (ì‚­ì œ)
 -- ALTER SEQUENCE sequence_name [INCREMENT BY n] [START WITH n][MAXVALUE n][MINVALUE n]
 -- INSERT INTO FRIEND (NUM, NAME, TEL, ADDRESS) VALUES (FRIEND_SEQ.NEXTVAL,' ',' ',' ');
 ----------------------------------------------------------------------------------------------------------------
 --[VIEW]--
 
---CREATE OR REPLACE VIEW ºä¸í AS SELECT EMPNO, ENAME, JOB, DEPTNO 
-   -- FROM EMP WHERE Á¶°Ç WITH CHECK OPTION                  --Á¶°Ç¿¡ ¸Â¾Æ¾ß ½ÇÇà
-   -- FROM EMP WITH READ ONLY                               --ÀÐ±â¸¸ °¡´É, °»½Å ºÒ°¡.
---VIEW´Â °¡»óÀÇ Å×ÀÌºí (¸Þ¸ð¸® °ø°£À» Â÷ÁöÇÏÁö ¾Ê´Â´Ù.)
---VIEW¿¡ DML¾²¸é ¿ø Å×ÀÌºí¿¡µµ Àû¿ëµÈ´Ù.
--- C OR R VIEW ºä¸í AS SELECT (DISTICT) DEPTNO, SAL*12 YEARSAL ....Ã³·³ ÇÊµå¸íÀ» SAL*12·Î Á¶ÀÛÇÏ°í º°ÄªÀ» ´Þ¸é °»½Å ºÒ°¡. ´ç¿¬ÇÑµí..
+--CREATE OR REPLACE VIEW ë·°ëª… AS SELECT EMPNO, ENAME, JOB, DEPTNO 
+   -- FROM EMP WHERE ì¡°ê±´ WITH CHECK OPTION                  --ì¡°ê±´ì— ë§žì•„ì•¼ ì‹¤í–‰
+   -- FROM EMP WITH READ ONLY                               --ì½ê¸°ë§Œ ê°€ëŠ¥, ê°±ì‹  ë¶ˆê°€.
+--VIEWëŠ” ê°€ìƒì˜ í…Œì´ë¸” (ë©”ëª¨ë¦¬ ê³µê°„ì„ ì°¨ì§€í•˜ì§€ ì•ŠëŠ”ë‹¤.)
+--VIEWì— DMLì“°ë©´ ì› í…Œì´ë¸”ì—ë„ ì ìš©ëœë‹¤.
+-- C OR R VIEW ë·°ëª… AS SELECT (DISTICT) DEPTNO, SAL*12 YEARSAL ....ì²˜ëŸ¼ í•„ë“œëª…ì„ SAL*12ë¡œ ì¡°ìž‘í•˜ê³  ë³„ì¹­ì„ ë‹¬ë©´ ê°±ì‹  ë¶ˆê°€. ë‹¹ì—°í•œë“¯..
 
 -- C OR R VIEW ...
-    --FROM VIEW, TABLE         --ÀÌ·±½ÄÀ¸·Î ÇÊµå¿¡ DEPTNO, DNAME °°Àº °Í°ú SUM(SAL), AVG(COMM) °°Àº °ÍÀ» ÇÔ²² ³õÀ» ¼ö ÀÖ´Ù.
---INLINE VIEW -- FROM¿¡ ¼­ºêÄõ¸®¸¦ ³Ö´Â °Í.
+    --FROM VIEW, TABLE         --ì´ëŸ°ì‹ìœ¼ë¡œ í•„ë“œì— DEPTNO, DNAME ê°™ì€ ê²ƒê³¼ SUM(SAL), AVG(COMM) ê°™ì€ ê²ƒì„ í•¨ê»˜ ë†“ì„ ìˆ˜ ìžˆë‹¤.
+--INLINE VIEW -- FROMì— ì„œë¸Œì¿¼ë¦¬ë¥¼ ë„£ëŠ” ê²ƒ.
 --EX. SELECT ENAME, SAL, E.DEPTNO FROM EMP E, (SELECT DEPTNO, AVG(SAL) AVGSAL FROM EMP GROUP BY DEPTNO) S WHERE E.DEPTNO=S.DEPTNO AND SAL>AVGSAL;
 
 -- TOP N
--- ÀÌ¸§À» ¾ËÆÄºª ¼ø¼­´ë·Î Á¤·ÄÇØ¼­ 6~10µî±îÁö Ãâ·Â(µî¼ö, ÀÌ¸§, »ç¹ø, JOB, MGR, HIREDATE)
--- 1´Ü°è : SELECT ENAME, EMPNO, JOB, MGR, HIREDATE FROM EMP ORDER BY ENAME;
--- 2´Ü°è : SELECT ROWNUM RN, ENAME, EMPNO, JOB, MGR, HIREDATE FROM (SELECT ENAME, EMPNO, JOB, MGR, HIREDATE FROM EMP ORDER BY ENAME); --1´Ü°è¸¦ FROM¿¡
--- 3´Ü°è : SELECT RN, ENAME, EMPNO, JOB, MGR, HIREDATE 
+-- ì´ë¦„ì„ ì•ŒíŒŒë²³ ìˆœì„œëŒ€ë¡œ ì •ë ¬í•´ì„œ 6~10ë“±ê¹Œì§€ ì¶œë ¥(ë“±ìˆ˜, ì´ë¦„, ì‚¬ë²ˆ, JOB, MGR, HIREDATE)
+-- 1ë‹¨ê³„ : SELECT ENAME, EMPNO, JOB, MGR, HIREDATE FROM EMP ORDER BY ENAME;
+-- 2ë‹¨ê³„ : SELECT ROWNUM RN, ENAME, EMPNO, JOB, MGR, HIREDATE FROM (SELECT ENAME, EMPNO, JOB, MGR, HIREDATE FROM EMP ORDER BY ENAME); --1ë‹¨ê³„ë¥¼ FROMì—
+-- 3ë‹¨ê³„ : SELECT RN, ENAME, EMPNO, JOB, MGR, HIREDATE 
             -- FROM (SELECT ROWNUM RN, ENAME, EMPNO, JOB, MGR, HIREDATE FROM (SELECT ENAME, EMPNO, JOB, MGR, HIREDATE FROM EMP ORDER BY ENAME))
             -- WHERE RN BETWEEN 6 AND 10;
