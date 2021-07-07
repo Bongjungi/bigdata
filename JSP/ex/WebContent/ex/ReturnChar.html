@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>수신메시지변환</title>
+</head>
+<body>
+<div id='header'>
+	<h2>암호 p,q 그리고 e값을 입력하시오.</h2>
+</div>
+
+<div id='content'>
+	<form action="ReturnChar.jsp" name="frm" method="post" onsubmit="return Chk()">
+		<p>p : <input type="number" name="p" required="required" /></p>
+		<p>q : <input type="number" name="q" required="required" /></p>
+		<p>e : <input type="number" name="e" required="required" /></p>
+		<p>message : <input type="text" name="message" required="required" /></p>
+		<p><input type="submit" value="변환" /></p>	
+	</form>
+</div>
+	
+</body>
+</html>
