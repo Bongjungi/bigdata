@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('#msg').text('<span>Hello, jQuery</span>');
+            $('#msg').html($('#msg').text() + '<span> Hello, jQuery2</span>');
+            $('input[name="msg"]').val('바라');//value를 수정
+            var msg = $('input[type="text"]').val();
+            alert(msg);
+            $('input[type="text"], input[type=password]').focus(function () {
+                $(this).css('background-color', 'lightyellow').css('color', 'red');
+            });
+            $('input[type="text"], input[type="password"]').blur(function () {
+                $(this).css('background-color', 'white').css('color', 'black');
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="msg"></p>
+    <p>메시지<input type="text" name="msg"/></p>
+    <p>비밀번호<input type="password" name="pw" /></p>
+    <p>선택 1<input type="radio" /></p>
+    <p>선택 2<input type="checkbox" /></p>
+</body>
+</html>

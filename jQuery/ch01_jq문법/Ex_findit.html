@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            ddukidx = parseInt(Math.random() * 9);
+            $('td').each(function (idx, item) {
+                if (idx == ddukidx) {
+                    $(item).click(function () {
+                        $(item).addClass('it');
+                        $('h3').text('정답');
+                        $('input').val('정답')
+                        $('td').off();
+                    });
+                } else {
+                    $(item).click(function () {
+                        $(item).addClass('redtd');
+                        $('h3').text('오답');
+                        $('input').val('오답')
+                    })
+                }
+            });
+            
+        });
+    </script>
+    <style>
+        table{margin:0 auto;}
+        td {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+        }
+
+        .redtd {
+            background-color: red;
+        }
+        .it {
+            background: url(img/dduk.jpg);
+        }
+        #table{
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="table">
+        <table>
+            <caption><h1>떡이 있는 곳을 맞춰봐</h1></caption>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+        <p><h3>한번에 맞추면 로또 ㄱㄱ</h3></p>
+        <p><input type="text" value="한번에 맞추면 로또 ㄱㄱ"/></p>
+    </div>
+    
+</body>
+</html>
