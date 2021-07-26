@@ -16,7 +16,7 @@
 	%>
 	<%=id %>
 	<%=pw %>
-	<h1>«œ«œ«œ</h1>
-	<jsp:include page="sub2.jsp" flush="true"/> <!-- sub2.jsp∏¶ ∆˜«‘ -->
+	<h1>√á√è√á√è√á√è</h1>
+	<jsp:include page="sub2.jsp" flush="true"></jsp:include> <!-- sub2.jsp¬∏¬¶ √Ü√∑√á√î -->
 </body>
 </html>
