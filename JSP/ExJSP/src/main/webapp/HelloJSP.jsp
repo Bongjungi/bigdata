@@ -7,60 +7,68 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%-- ÁÖ¼®
-	<%@ Áö½ÃÀÚ : page(ÆäÀÌÁö ¼Ó¼º ÁöÁ¤), include(º°µµÀÇ ÆäÀÌÁö¸¦ ÇöÀç ÆäÀÌÁö¿¡ »ğÀÔ), taglib(ÅÂ±×¶óÀÌºê·¯¸®ÀÇ ÅÂ±× »ç¿ë)  %>
+<%-- ì£¼ì„
+	<%@ ì§€ì‹œì : page(í˜ì´ì§€ ì†ì„± ì§€ì •), include(ë³„ë„ì˜ í˜ì´ì§€ë¥¼ í˜„ì¬ í˜ì´ì§€ì— ì‚½ì…), taglib(íƒœê·¸ë¼ì´ë¸ŒëŸ¬ë¦¬ì˜ íƒœê·¸ ì‚¬ìš©)  %>
 	 ex) <%@ include file="include1.jsp" %>, 
-	<%! ¼±¾ğ : º¯¼ö, ¸Ş¼Òµå ¼±¾ğ %>
-	<%= Ç¥Çö½Ä : °á°ú°ª Ãâ·Â %>
-	<% ½ºÅ©¸³Æ®¸´ : JAVA ÄÚµå %>
-	<jsp:action> ¾×¼ÇÅÂ±× : ÀÚ¹Ùºó ¿¬°á </jsp:action>
-jsp µ¿ÀÛ ¿ø¸® : À¥ºê¶ó¿ìÀú ¿äÃ» -> jsp¸¦ servletÀ¸·Î -> servletÀ» class·Î -> À¥ºê¶ó¿ìÀú ÀÀ´ä
+	<%! ì„ ì–¸ : ë³€ìˆ˜, ë©”ì†Œë“œ ì„ ì–¸ %>
+	<%= í‘œí˜„ì‹ : ê²°ê³¼ê°’ ì¶œë ¥ %>
+	<% ìŠ¤í¬ë¦½íŠ¸ë¦¿ : JAVA ì½”ë“œ %>
+	<jsp:action> ì•¡ì…˜íƒœê·¸ : ìë°”ë¹ˆ ì—°ê²° </jsp:action>
+jsp ë™ì‘ ì›ë¦¬ : ì›¹ë¸Œë¼ìš°ì € ìš”ì²­ -> jspë¥¼ servletìœ¼ë¡œ -> servletì„ classë¡œ -> ì›¹ë¸Œë¼ìš°ì € ì‘ë‹µ
 
-getContextPath() : À¥¾îÇÃ¸®ÄÉÀÌ¼ÇÀÇ ÄÁÅØ½ºÆ® ÆĞ½º¸¦ ¾ò½À´Ï´Ù.
-getMethod() : get¹æ½Ä°ú post¹æ½ÄÀ» ±¸ºĞÇÒ ¼ö ÀÖ½À´Ï´Ù.
-getSession() : ¼¼¼Ç °´Ã¼¸¦ ¾ò½À´Ï´Ù.
-getProtocol() : ÇØ´ç ÇÁ·ÎÅäÄİÀ» ¾ò½À´Ï´Ù.
-getRequestURL() : ¿äÃ» URL¸¦ ¾ò½À´Ï´Ù.
-getRequestURI() : ¿äÃ» URI¸¦ ¾ò½À´Ï´Ù.
-getQueryString() : Äõ¸®½ºÆ®¸µÀ» ¾ò½À´Ï´Ù.
+getContextPath() : ì›¹ì–´í”Œë¦¬ì¼€ì´ì…˜ì˜ ì»¨í…ìŠ¤íŠ¸ íŒ¨ìŠ¤ë¥¼ ì–»ìŠµë‹ˆë‹¤.
+getMethod() : getë°©ì‹ê³¼ postë°©ì‹ì„ êµ¬ë¶„í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+getSession() : ì„¸ì…˜ ê°ì²´ë¥¼ ì–»ìŠµë‹ˆë‹¤.
+getProtocol() : í•´ë‹¹ í”„ë¡œí† ì½œì„ ì–»ìŠµë‹ˆë‹¤.
+getRequestURL() : ìš”ì²­ URLë¥¼ ì–»ìŠµë‹ˆë‹¤.
+getRequestURI() : ìš”ì²­ URIë¥¼ ì–»ìŠµë‹ˆë‹¤.
+getQueryString() : ì¿¼ë¦¬ìŠ¤íŠ¸ë§ì„ ì–»ìŠµë‹ˆë‹¤.
 
 request.setCharacterEncoding("EUC-KR")
-request.getParameter(String name) : name¿¡ ÇØ´çÇÏ´Â ÆÄ¶ó¹ÌÅÍ °ªÀ» ±¸ÇÔ
-request.getParameterNames() : ¸ğµç ÆÄ¶ó¹ÌÅÍ ÀÌ¸§À» ±¸ÇÔ
-request.getParameterValues(String name) : name¿¡ ÇØ´çÇÏ´Â ÆÄ¶ó¹ÌÅÍ °ªµéÀ» ±¸ÇÔ.(ex. String[] hobbys = re.get(String hobby)
+request.getParameter(String name) : nameì— í•´ë‹¹í•˜ëŠ” íŒŒë¼ë¯¸í„° ê°’ì„ êµ¬í•¨
+request.getParameterNames() : ëª¨ë“  íŒŒë¼ë¯¸í„° ì´ë¦„ì„ êµ¬í•¨
+request.getParameterValues(String name) : nameì— í•´ë‹¹í•˜ëŠ” íŒŒë¼ë¯¸í„° ê°’ë“¤ì„ êµ¬í•¨.(ex. String[] hobbys = re.get(String hobby)
 
-response.getCharacterEncoding() :ÀÀ´äÇÒ¶§ ¹®ÀÚÀÇ ÀÎÄÚµù ÇüÅÂ¸¦ ±¸ÇÔ
-response.addCookie(Cookie) : ÄíÅ°¸¦ ÁöÁ¤ÇÕ´Ï´Ù.
-response.sendRedirect(URL) :ÁöÁ¤ÇÑ URL·Î ÀÌµ¿ÇÕ´Ï´Ù.
+response.getCharacterEncoding() :ì‘ë‹µí• ë•Œ ë¬¸ìì˜ ì¸ì½”ë”© í˜•íƒœë¥¼ êµ¬í•¨
+response.addCookie(Cookie) : ì¿ í‚¤ë¥¼ ì§€ì •í•©ë‹ˆë‹¤.
+response.sendRedirect(URL) :ì§€ì •í•œ URLë¡œ ì´ë™í•©ë‹ˆë‹¤.
 
-¾×¼ÇÅÂ±× - forward, include, param
+ì•¡ì…˜íƒœê·¸ - forward, include, param
 <jsp:forward page="sub.jsp">
 	<jsp:param name="a" value="b"/>
 </jsp:forward>
 <jsp:include page="sub2.jsp/>
 
-ÄíÅ° : ¿¬°áÀÌ ²÷°åÀ» ¶§ Á¤º¸¸¦ Áö¼ÓÀûÀ¸·Î À¯ÁöÇÏ±â À§ÇÑ ¼ö´Ü. ¼­¹ö¿¡¼­ »ı¼ºµÇ¾î Å¬¶óÀÌ¾ğÆ® Ãø¿¡ ÀúÀå. ¼­¹ö¿¡ ¿äÃ»ÇÒ ¶§¸¶´Ù ÄíÅ°ÀÇ ¼Ó¼º°ªÀ» ÂüÁ¶ ¶Ç´Â º¯°æÇÒ ¼ö ÀÖÀ½
-  setMaxAge() : ÄíÅ°ÀÇ À¯È¿±â°£ ¼³Á¤
-  setPath() : ÄíÅ°»ç¿ëÀÇ À¯È¿µğ·ºÅä¸®¸¦ ¼³Á¤
-  setValue() : ÄíÅ°ÀÇ °ªÀ» ¼³Á¤ *********
-  setVersion() : ÄíÅ°ÀÇ ¹öÀüÀ» ¼³Á¤
-  get .. () : .. ¾òÀ½
+ì¿ í‚¤ : ì—°ê²°ì´ ëŠê²¼ì„ ë•Œ ì •ë³´ë¥¼ ì§€ì†ì ìœ¼ë¡œ ìœ ì§€í•˜ê¸° ìœ„í•œ ìˆ˜ë‹¨. ì„œë²„ì—ì„œ ìƒì„±ë˜ì–´ í´ë¼ì´ì–¸íŠ¸ ì¸¡ì— ì €ì¥. ì„œë²„ì— ìš”ì²­í•  ë•Œë§ˆë‹¤ ì¿ í‚¤ì˜ ì†ì„±ê°’ì„ ì°¸ì¡° ë˜ëŠ” ë³€ê²½í•  ìˆ˜ ìˆìŒ
+  setMaxAge() : ì¿ í‚¤ì˜ ìœ íš¨ê¸°ê°„ ì„¤ì •
+  setPath() : ì¿ í‚¤ì‚¬ìš©ì˜ ìœ íš¨ë””ë ‰í† ë¦¬ë¥¼ ì„¤ì •
+  setValue() : ì¿ í‚¤ì˜ ê°’ì„ ì„¤ì • *********
+  setVersion() : ì¿ í‚¤ì˜ ë²„ì „ì„ ì„¤ì •
+  get .. () : .. ì–»ìŒ
 
-¼¼¼Ç: ÄíÅ°Ã³·³ ¼­¹ö¿ÍÀÇ °ü°è¸¦ À¯ÁöÇÏ±â À§ÇÑ ¼ö´Ü. ¼­¹ö»ó¿¡ °´Ã¼·Î Á¸Àç
-  setAttribute() : ¼¼¼Ç¿¡ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÕ´Ï´Ù.
-  getAttribute() : ¼¼¼Ç¿¡¼­ µ¥ÀÌÅÍ¸¦ ¾ò½À´Ï´Ù.
-  getAttributeNames() : ¼¼¼Ç¿¡ ÀúÀåµÇ¾î ÀÖ´Â ¸ğµç µ¥ÀÌÅÍÀÇ ÀÌ¸§(À¯´ÏÅ©ÇÑ Å°°ª)À» ¾ò½À´Ï´Ù.
-  getId() : ÀÚµ¿ »ı¼ºµÈ ¼¼¼ÇÀÇ À¯´ÏÅ©ÇÑ ¾ÆÀÌµğ¸¦ ¾ò½À´Ï´Ù.
-  isNew() : ¼¼¼ÇÀÌ ÃÖÃÊ »ı¼ºµÇ¾ú´ÂÁö, ÀÌÀü¿¡ »ı¼ºµÈ ¼¼¼ÇÀÎÁö¸¦ ±¸ºĞÇÕ´Ï´Ù.
-  getMaxInactiveInterval() : ¼¼¼ÇÀÇ À¯È¿½Ã°£À» ¾ò½À´Ï´Ù. °¡Àå ÃÖ±Ù ¿äÃ»½ÃÁ¡À» ±âÁØÀ¸·Î Ä«¿îÆ®µË´Ï´Ù.
-  removeAttribute() : ¼¼¼Ç¿¡¼­ Æ¯Á¤ µ¥ÀÌÅÍ Á¦°ÅÇÕ´Ï´Ù.
-  invalidate() : ¼¼¼ÇÀÇ ¸ğµç µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÕ´Ï´Ù.
+ì„¸ì…˜: ì¿ í‚¤ì²˜ëŸ¼ ì„œë²„ì™€ì˜ ê´€ê³„ë¥¼ ìœ ì§€í•˜ê¸° ìœ„í•œ ìˆ˜ë‹¨. ì„œë²„ìƒì— ê°ì²´ë¡œ ì¡´ì¬
+  setAttribute() : ì„¸ì…˜ì— ë°ì´í„°ë¥¼ ì €ì¥í•©ë‹ˆë‹¤.
+  getAttribute() : ì„¸ì…˜ì—ì„œ ë°ì´í„°ë¥¼ ì–»ìŠµë‹ˆë‹¤.
+  getAttributeNames() : ì„¸ì…˜ì— ì €ì¥ë˜ì–´ ìˆëŠ” ëª¨ë“  ë°ì´í„°ì˜ ì´ë¦„(ìœ ë‹ˆí¬í•œ í‚¤ê°’)ì„ ì–»ìŠµë‹ˆë‹¤.
+  getId() : ìë™ ìƒì„±ëœ ì„¸ì…˜ì˜ ìœ ë‹ˆí¬í•œ ì•„ì´ë””ë¥¼ ì–»ìŠµë‹ˆë‹¤.
+  isNew() : ì„¸ì…˜ì´ ìµœì´ˆ ìƒì„±ë˜ì—ˆëŠ”ì§€, ì´ì „ì— ìƒì„±ëœ ì„¸ì…˜ì¸ì§€ë¥¼ êµ¬ë¶„í•©ë‹ˆë‹¤.
+  getMaxInactiveInterval() : ì„¸ì…˜ì˜ ìœ íš¨ì‹œê°„ì„ ì–»ìŠµë‹ˆë‹¤. ê°€ì¥ ìµœê·¼ ìš”ì²­ì‹œì ì„ ê¸°ì¤€ìœ¼ë¡œ ì¹´ìš´íŠ¸ë©ë‹ˆë‹¤.
+  removeAttribute() : ì„¸ì…˜ì—ì„œ íŠ¹ì • ë°ì´í„° ì œê±°í•©ë‹ˆë‹¤.
+  invalidate() : ì„¸ì…˜ì˜ ëª¨ë“  ë°ì´í„°ë¥¼ ì‚­ì œí•©ë‹ˆë‹¤.
   
- ¿¹¿Ü ÆäÀÌÁö Ã³¸® : 
+ ì˜ˆì™¸ í˜ì´ì§€ ì²˜ë¦¬ : 
  	1.<%@page errorPage="errorPage.jsp"%>
  	2.<%@page isErrorPage="true"%>
  		<% response.setStatus(200);%>
  		<%=exception.getMessage()%>
+ ìë°” ë¹ˆ: useBean, setProperty, getProperty
+ 	<jsp:useBean id="student" class="com.javalec.ex.student" scope="page"/> 
+	scope - page : ìƒì„±ëœ í˜ì´ì§€ ë‚´ì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥
+	request : ìš”ì²­ëœ í˜ì´ì§€ ë‚´ì—ì„œë§Œ ì‚¬ìš© ê°€ëŠ¥
+	session : ì›¹ë¸Œë¼ìš°ì €ì˜ ìƒëª…ì£¼ê¸°ì™€ ë™ì¼í•˜ê²Œ ì‚¬ìš© ê°€ëŠ¥
+	application : ì›¹ ì–´í”Œë¦¬ì¼€ì´ì…˜ ìƒëª…ì£¼ê¸°ì™€ ë™ì¼í•˜ê²Œ ì‚¬ìš© ê°€ëŠ¥
+	<jsp:setProperty name="student" property="name" value="í™ê¸¸ë™"/>
+	<jsp:getProperty name="student" property="name"/>
  --%>
  <%!
  	int i = 10;
@@ -80,10 +88,10 @@ response.sendRedirect(URL) :ÁöÁ¤ÇÑ URL·Î ÀÌµ¿ÇÕ´Ï´Ù.
  	%><%=i%><%=sum(1,6)%><%
  %>
  <%
- 	out.println("¼­¹ö : "+ request.getServerName()+"<br/>");
- 	out.println("Æ÷Æ®¹øÈ£ : "+ request.getServerPort()+"<br/>");
- 	out.println("¿äÃ»¹æ½Ä : "+ request.getMethod()+"<br/>");
- 	out.println("ÇÁ·ÎÅäÄİ : "+ request.getProtocol()+"<br/>");
+ 	out.println("ì„œë²„ : "+ request.getServerName()+"<br/>");
+ 	out.println("í¬íŠ¸ë²ˆí˜¸ : "+ request.getServerPort()+"<br/>");
+ 	out.println("ìš”ì²­ë°©ì‹ : "+ request.getMethod()+"<br/>");
+ 	out.println("í”„ë¡œí† ì½œ : "+ request.getProtocol()+"<br/>");
  	out.println("URL : "+ request.getRequestURL()+"<br/>");
  	out.println("URI : "+ request.getRequestURI()+"<br/>");
  	
