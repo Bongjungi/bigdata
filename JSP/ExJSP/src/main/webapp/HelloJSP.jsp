@@ -86,6 +86,7 @@ response.sendRedirect(URL) :지정한 URL로 이동합니다.
 	 //1.Class.forName("oracle.jdbc....)
 	 //2.conn=DriverManager.getConnection(url,uid,upw)                 이것들 대신에
 	 
+	   private DataSource dataSource;
 	 1.Context context = new InitialContext(); 
 	   dataSource = (DataSource)context.lookup("javax:comp/env/jdbc/Oracle11g"); 
 	 2.conn=dataSource.getConnection();                                  이것들 사용
