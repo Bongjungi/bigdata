@@ -69,6 +69,27 @@ response.sendRedirect(URL) :지정한 URL로 이동합니다.
 	application : 웹 어플리케이션 생명주기와 동일하게 사용 가능
 	<jsp:setProperty name="student" property="name" value="홍길동"/>
 	<jsp:getProperty name="student" property="name"/>
+커넥션 풀 : 데이터베이스 부하를 막기 위해 커넥션을 미리 만들어 놈
+	tomcat의 context.xml의 <context></context>에
+	<Resource
+	 auth="Container"
+	 driverClassName = "oracle.jdbc.driver.OracleDriver"
+	 url = "jdbc:oracle:thin:@localhost:1521:xe"
+	 username = "scott"
+	 password = "tiger"
+	 name = "jdbc/Oracle11g"
+	 type = "javax.sql.DataSource"
+	 maxActive = "50"
+	 maxWait = "1000"
+	 />
+	 DAO에서 
+	 //1.Class.forName("oracle.jdbc....)
+	 //2.conn=DriverManager.getConnection(url,uid,upw)                 이것들 대신에
+	 
+	 1.Context context = new InitialContext(); 
+	   dataSource = (DataSource)context.lookup("javax:comp/env/jdbc/Oracle11g"); 
+	 2.conn=dataSource.getConnection();                                  이것들 사용
+	 
  --%>
  <%!
  	int i = 10;
