@@ -93,7 +93,7 @@ response.sendRedirect(URL) :지정한 URL로 이동합니다.
 	 
 파일 업로드 :
 	1. www.servlets.com에 가서 cos.jar를 다운받아 webcontent의 web-inf에 넣고, filefolder를 생성한 뒤에 작업을 수행한다.
-	2. 업로드된 파일은 webcontent의 filefolder가 아닌 tomcat의 filefolder에 있다.
+	2. 업로드된 파일은 webcontent의 filefolder가 아닌 tomcat의 wtpwebapps에 있다.
  --%>
  <%!
  	int i = 10;
