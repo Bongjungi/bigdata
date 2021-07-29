@@ -108,7 +108,23 @@ EL(Expression Language): 표현식이나 액션태그를 대신하여 표현하�
 			initParam : 초기화 파라미터를 참조하는 객체
 			cookie : cookie객체를 참조하는 객체
 		    	
-	
+JSTL : 가독성을 위한 언어 ( 라이브러리 : Core, XML Processing, I18N formatting, SQL, Functions)
+	(준비사항) - http://tomcat.apache.org/taglibs/ 에 가서 apache standard taglib - standard 1.1 download -> binaries -> jakarta-taglibs-standard-1.1.2.zip 다운로드
+		-> 압축 풀고 lib에 있는 2개의 jar(jstl, standard)을 아파치톰캣 lib에 복사
+	Core : 기본 라이브러리 : 출력, 제어, 반복문 등의 기능
+		<%@ taglib uri=http://java.sun.com/jsp/jstl/core prefix="c" %> #앞으로 c로 쓰겠다.
+		<c:out value="출력값" default="기본값" escapeXml="true or false"> # 출력 #true :특수기호마다 해당하는 특수기호 출력 false: 특수기호 그대로 출력
+		<c:set var="변수명" value="설정값", target="객체" property="값" scope="범위"> # 변수 설정
+		<c:remove var="변수명" scope="범위"> #변수 제거
+		<c:catch var="변수명"> #예외 처리
+		<c:if test="조건" var="조건 처리 변수명" scope="범위"> #제어문if
+		<c:choose>
+		<c:when test="조건"> 처리 내용 </c:when>
+		<c:otherwise> 처리 내용 </c:otherwise>
+		</c:choose>                                          #제어문switch
+		<c:forEach items="객체명" begin="시작 인덱스" end="끝 인덱스" step="증감식" var="변수명" varStatus="상태변수"> #반복문for
+		<c:redirect url="url">	#페이지 이동 태그
+		<c:param name="파라미터명" value="값"> #파라미터 전달 태그
 	
 	
 	
