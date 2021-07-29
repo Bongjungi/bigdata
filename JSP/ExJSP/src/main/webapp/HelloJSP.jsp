@@ -94,6 +94,24 @@ response.sendRedirect(URL) :지정한 URL로 이동합니다.
 파일 업로드 :
 	1. www.servlets.com에 가서 cos.jar를 다운받아 webcontent의 web-inf에 넣고, filefolder를 생성한 뒤에 작업을 수행한다.
 	2. 업로드된 파일은 webcontent의 filefolder가 아닌 tomcat의 wtpwebapps에 있다.
+	
+	
+EL(Expression Language): 표현식이나 액션태그를 대신하여 표현하는 언어
+	1. <%=value%>  -->  ${value}
+	2. <jsp:getProperty name="member" property="name"/>  -->${member.name}
+	3. 내장객체 : pageScope - page객체를 참조하는 객체
+			requestScope - request객체를 참조하는 객체
+			sessionScope - session객체를 참조하는 객체
+			applicationScope - application객체를 참조하는 객체
+			param - 요청 파라미터를 참조하는 객체
+			paramValues : 요청 파라미터(배열)을 참조하는 객체
+			initParam : 초기화 파라미터를 참조하는 객체
+			cookie : cookie객체를 참조하는 객체
+		    	
+	
+	
+	
+	
  --%>
  <%!
  	int i = 10;
