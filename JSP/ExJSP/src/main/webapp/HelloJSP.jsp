@@ -125,6 +125,14 @@ JSTL : 가독성을 위한 언어 ( 라이브러리 : Core, XML Processing, I18N
 		<c:forEach items="객체명" begin="시작 인덱스" end="끝 인덱스" step="증감식" var="변수명" varStatus="상태변수"> #반복문for
 		<c:redirect url="url">	#페이지 이동 태그
 		<c:param name="파라미터명" value="값"> #파라미터 전달 태그
+URL패턴 : 
+	1. 디렉터리 패턴 - 디렉터리 형태로 서버의 해당 컴포넌트를 찾아서 실행하는 구조
+		http://localhost:8181/ex/Hello -> /Hello서블릿
+	2. 확장자 패턴 - 확장자 형태로 서버의 해당 컴포넌트를 찾아서 실행하는 구조
+		http://localhost:8181/ex/Hello.do -> *.do서블릿
+FrontController 패턴 : 요청을 한곳으로 집중시켜 개발유지보수의 효율성을 극대화
+	(요청1,요청2 ...) -> 서블릿 -> DAO
+	
 	
 	
 	
