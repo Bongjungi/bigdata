@@ -144,6 +144,7 @@ Command 패턴 : 서블릿이 직접 처리하지 않고 해당 클래스가 처
 MVC 패턴 : 클라이언트 -> Controller -> Model(DAO) -> DB -> Model -> Controller -> View(jsp) -> 클라이언트
 	(Model.1 : 클라이언트 <-> jsp(View+Controller) <-> dao(Model) <-> DB)
 	(Model.2 (모듈화) : 클라이언트 -> Servlet(Controller) -> (command,dao)(model) -> DB -> (command,dao) -> Servlet -> jsp(view) -> 클라이언트)
+	(전체 구성 : 클라이언트 ->FrontController ->(command1,command2 ...) -> doa -> DB -> doa(db로부터 dto객체로 받음)  -> FrontController -> (ui1, ui2,...)) 
 		
 	
 	
