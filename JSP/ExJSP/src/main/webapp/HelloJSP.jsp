@@ -141,6 +141,9 @@ Command 패턴 : 서블릿이 직접 처리하지 않고 해당 클래스가 처
 		(클라이언트 ->(request1) 요청받은 컴포넌트 -> (request1) 위임받은 컴포넌트
 	HttpServletResponse 클래스 - 요청받는 요청객체를 위임받은 컴포넌트에 전달하지 않고 새로운 요청객체를 생성
 		(클라이언트 ->(request1) 요청받은 컴포넌트 ->(response1) 클라이언트 ->(request2) 위임받은 컴포넌트 ->(response2) 클라이언트)
+MVC 패턴 : 클라이언트 -> Controller -> Model(DAO) -> DB -> Model -> Controller -> View(jsp) -> 클라이언트
+	(Model.1 : 클라이언트 <-> jsp(View+Controller) <-> dao(Model) <-> DB)
+	(Model.2 (모듈화) : 클라이언트 -> Servlet(Controller) -> (command,dao)(model) -> DB -> (command,dao) -> Servlet -> jsp(view) -> 클라이언트)
 		
 	
 	
