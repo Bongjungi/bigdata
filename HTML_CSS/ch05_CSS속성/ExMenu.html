@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin 0; padding:0;}
+        div .b {
+            display: inline-block;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        .b p{
+            box-sizing:border-box;
+        }
+        .b a{
+            border:25px solid green;
+            display:block;
+            width:50px; height:50px;
+            background-color:red;
+            text-align:center;
+            line-height:50px;
+            
+        }
+
+        ul li a{
+            text-decoration:none;
+            display:block;
+        }
+        #nav{width:770px; margin:5px auto; border:1px solid gray;}
+        #nav ul{overflow:hidden;}
+            #nav ul li {
+                float: left;
+                list-style: none;
+                width: 150px;
+                border-top: 1px solid red;
+                border-bottom: 1px solid red;
+                margin:2px;
+                height:100px; text-align:center;
+                line-height:100px;
+                font-size:1.8em;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="b">
+            <p><a href="#">menu1</a></p>
+        </div>
+        <div class="b">
+            <p><a href="#">menu2</a></p>
+        </div>
+        <div class="b">
+            <p><a href="#">menu3</a></p>
+        </div>
+        <div class="b">
+            <p><a href="#">menu4</a></p>
+        </div>
+        <div class="b">
+            <p><a href="#">menu5</a></p>
+        </div>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu1</a></li>
+
+        </ul>
+    </div>
+</body>
+</html>

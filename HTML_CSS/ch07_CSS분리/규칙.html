@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/title.css" rel="stylesheet" type="text/css" />
+    <link href="css/content_screen.css" rel="stylesheet" type="text/css" />
+    <link href="css/content_print.css" rel="stylesheet" type="text/css" />
+    <link href="css/date.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('css/title.css');
+        @import url(css/date.css);
+        @media screen and (min-device-width:1000px){
+            #wrap .content {
+                background-color: darkgreen;
+                color: yellow;
+                font-size: 1.5em;
+                padding: 30px 10px;
+            }
+              
+        }
+        @media print{
+            #wrap .content {
+                background-color: white;
+                color: darkslategray;
+                font-size: 1em;
+                padding: 30px 10px;
+            }
+                #wrap .content p:last-child {
+                    display: none;
+                }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="title">
+            <h1>NOTICE</h1>
+        </div>
+        <div class="content">
+            <p>
+                CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리CSS분리
+            </p>
+            <p>test</p>
+        </div>
+        <div class="date">
+            <p>2021.06.24<br />write by Hong Gil Dong</p>
+        </div>
+    </div>
+</body>
+</html>

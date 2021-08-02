@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{margin:0;padding:0;}
+        #pic{
+            position:absolute;
+            left:0px;top:0px;
+            opacity:0.4;
+            z-index:-99;
+        }
+        #all {
+            margin: 0 auto;
+            height: 100%;
+            width:1000px;
+            position:relative;
+        }
+        #headback {
+            background-color: aquamarine;
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 1000px;
+            height: 100px;
+            z-index:-50;
+            
+        }
+        #header{
+            margin:0 auto;
+            text-align:center;
+            width:1000px;
+            height:100px;
+            position:relative;
+        }
+        #header h1{
+            padding-top:20px;
+               margin-top:20px;
+        }
+        #navback {
+            background-color: green;
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 1000px;
+            height: 100px;
+            z-index:-50;
+        }
+        #nav {
+            
+            height: 100px;
+            width: 1000px;
+            text-align: center;
+            margin: 0 auto;
+            position:relative;
+            
+        }
+        #nav #nav1{
+            overflow:hidden;
+            text-align:center;
+            
+            width:900px;
+            height:80px;
+            margin:10px auto;
+        }
+        #nav #nav1 ul li{
+            float:left;
+            list-style:none;
+            text-align:center;
+            width:80px;
+            height:45px;
+   
+            margin-bottom:12px;
+           margin-left:12px;
+           margin-right:12px;
+        }
+            #nav #nav1 ul li a {
+                display: block;
+                width: 80px;
+                height: 40px;
+                background-color: red;
+                text-align:center;
+                line-height:40px;
+                text-decoration:none;
+            }
+        #back3 {
+            background-color: lightgray;
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 1000px;
+            height: 500px;
+            z-index: -50;
+        }
+        #mid {
+            overflow: hidden;
+            
+            width: 1000px;
+            height: 500px;
+            text-align: center;
+            margin: 0 auto;
+            position:relative;
+
+        }
+                #mid #content {
+                    float: left;
+                   border-right:1px solid black;
+                    height: 498px;
+                    width:596px;
+                }
+                #mid #banner {
+                    float: left;
+                    
+                    height: 498px;
+                    width:400px;
+                }
+        #back4 {
+            background-color:lightcoral;
+            opacity: 0.5;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 1000px;
+            height: 50px;
+            z-index: -50;
+        }
+        #footer {
+            margin: 0 auto;
+            text-align: left;
+            width: 1000px;
+            height: 50px;
+            position:relative;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div id="pic">
+            <img src="man.png" alt=":사진" width="1000" height="750" />
+        </div>
+        <div id="header">
+            <div id="headback">
+
+            </div>
+            <h1>HEADER</h1>
+        </div>
+        <div id="nav">
+            <div id="navback">
+            </div>
+            <h2>nav</h2>
+            <div id="nav1">
+                <ul>
+                    <li><a href="#">nav1</a></li>
+                    <li><a href="#">nav2</a></li>
+                    <li><a href="#">nav3</a></li>
+                    <li><a href="#">nav4</a></li>
+                    <li><a href="#">nav5</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mid">
+            <div id="back3">
+
+            </div>
+            <div id="content">
+                <p>content</p>
+            </div>
+            <div id="banner">
+                <p>banner</p>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="back4">
+
+            </div>
+            <p>COPYRIGHT ⓒ BY tjoeun academy ALL RIGHT RESERVED</p>
+        </div>
+    </div>
+    
+</body>
+</html>
