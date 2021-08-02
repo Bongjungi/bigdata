@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{width:800px; margin:0 auto;}
+        #wrap #header{
+            text-align:center;/*가운데 정렬*/
+            border-bottom:1px solid #cccccc;
+        }
+        #wrap #content p:nth-child(2)::first-line,
+        #wrap #content p:nth-child(3)::first-line{
+            color:blue; font-size:20px;/*기본사이즈가 16px*/font-weight:bold;
+        }
+            #wrap #content p:nth-child(2)::first-letter,
+            #wrap #content p:nth-child(3)::first-letter{
+                font-size:2em;
+            }
+            #wrap #content p:nth-child(3)::selection{
+                background-color:white;
+                color:black;
+            }
+            #wrap #footer ul{
+                border-top:1px solid #cccccc;
+                overflow:hidden;
+            }
+            #wrap #footer ul li{
+                float:left;
+                list-style:none;
+                padding:10px;
+                margin: 5px 10px;
+            }
+            #wrap #footer ul li:first-child{
+                padding-top:25px;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>제목이나 회사명</h1>
+
+        </div>
+        <div id="content">
+            <p>아아아아아아아<br />나나나나나나나나나마마마마마마마<br />자자자자자자자아아아아아아아</p>
+            <p>연연연연연연연<br />연연연연연연연연연연연연연연연<br />연연연연연연연연연연연연연연연</p>
+            <p>바바바바바바바바바바<br />바바바바바바바바바바바바바바바바바바바바바바바바바바바</p>
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="0618/logo.png" alt="로고" /></li>
+                <li><img src="0618/address.png" alt="주소" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

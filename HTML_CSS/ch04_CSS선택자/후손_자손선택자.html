@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #wrap,#footer{width:600px; margin:0 auto; border:1px solid gray;}
+        #header{overflow:hidden;}
+        #header>.logo{/*자손선택자 #header 바로 밑의 .logo*/
+            float:left;padding:10px 50px 10px 150px;
+
+        }
+        #header .copy{/*후손선택자 #header 밑의 .copy*/
+            float:left;padding:20px 100px 10px 50px;
+        }
+        div p{/*후손선택자 -> 자손선택자 포함*/
+           font-size:25px;
+        }
+        div>p{/*자손선택자(자식)*/
+           color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class= "logo">
+            <h1>LOGO</h1>
+        </div>
+        <div class="copy">
+            <h2>00주식회사</h2>
+        </div>
+    </div>
+    <div id="wrap">
+        <p>거너더러머버서어저처커터퍼허</p>
+        <ul>
+            <li><p>ㄱ</p></li>
+            <li><p>ㄴ</p></li>
+            <li><p>ㄷ</p></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>서울시 마포구</p>
+    </div>
+</body>
+</html>

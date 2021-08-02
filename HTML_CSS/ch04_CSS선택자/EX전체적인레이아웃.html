@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #header, #content, #footer{
+            width:1000px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+            #header .left {
+                border-radius:20px 0 20px 0;
+            }
+            #header .right {
+                border-radius: 0px 20px 0px 20px;
+            }
+            #header .center {
+                border-radius: 0px 0 20px 20px;
+            }
+            #content .left{
+                border-radius: 0 20px 20px 0;
+            }
+            #content .center {
+                border-radius: 20px 20px 20px 20px;
+            }
+            #content .right {
+                border-radius: 20px 0px 0px 20px;
+            }
+            #footer .left {
+                border-radius: 0px 20px 0px 20px;
+            }
+            #footer .center {
+                border-radius: 20px 20px 0px 0px;
+            }
+            #footer .right {
+                border-radius: 20px 0px 20px 0px;
+            }
+        .left, .right{
+            background-color:#eeeeee;
+            border:1px solid gray;
+            width:150px; height:150px; float:left;
+        }
+        .center{
+            background-color:#eeeeee;
+            border:1px solid gray;
+            width:693px; height:150px; float:left;
+        }
+        #content>div{height:300px;}
+        
+        #nav{
+            overflow:hidden;
+        }
+        #nav ul li{
+            float:left;
+            list-style:none;
+            padding:10px;
+        }
+        #nav ul li a{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #section{
+            text-align:center;
+            padding-top:40px;
+        }
+        #content .right ol li:nth-child(9)~li{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+
+    </div>
+    <div id="content">
+        <div class="left"></div>
+        <div class="center">
+            <div id="nav">
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul>
+            </div>
+            <div id="section">
+                <h2>별헤는밤</h2>
+                <p>아아아아아아아아아아아아앙아아아아아아아아아아아아아아아</p>
+            </div>
+
+        </div>   
+        <div class="right">
+            <ol>
+                <li>태그</li>
+                <li>전체(*)</li>
+                <li>id, class</li>
+                <li>속성</li>
+                <li>후손,자손(>)</li>
+                <li>동위</li>
+                <li>반응</li>
+                <li>상태</li>
+                <li>구조</li>
+                <li>문자</li>
+                <li>링크</li>
+                <li>부정</li>
+            </ol>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

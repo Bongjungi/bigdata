@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div {
+            border: 1px solid lightgray;
+        }
+        #header {
+            width: 600px;
+            margin: 0 auto; /* 0 auto 0 auto 0 auto 상하좌우*/
+            background-color:yellow;
+            text-align:center;/*글씨 가운데 정렬*/
+        } 
+        #wrap{width:600px; margin:0 auto;
+              background-color:aqua;
+              overflow:hidden;/*부모단에 overflow:hidden*/
+              height:250px;
+        }
+        #wrap #content {
+                float: left;
+                width: 298px; /*content영역=298+2*/
+                text-align: center;
+                height: 250px;
+            }
+        #wrap #side_banner {
+                float: right;
+                width: 298px;
+                text-align: center;
+                height: 250px;
+            }
+        #wrap #content .menu1{
+            font-size:1.5em;/*글씨 크기를 원래 사이즈의 1.5배로*/
+        }
+        #menu2, #menu4{
+            font-weight:bold;/*글씨 진하게*/
+        }
+        #wrap #side_banner img{width:220px;}
+        #footer{
+            clear:both;
+            width: 600px;
+            background-color:yellow;
+            margin: 0 auto;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div id="header">
+        <h1>HEADER</h1>
+    </div>
+    <div id="wrap">
+        <div id="content">
+            <h2>CONTENT</h2>
+            <ul>
+                <li class="menu1">menu1</li>
+                <li id="menu2">menu2</li>
+                <li class="menu1">menu3</li>
+                <li id="menu4">menu4</li>
+                <li class="menu1">menu5</li>
+            </ul>
+        </div>
+        <div id="side_banner">
+            <h2>BANNER</h2>
+            <a href="http://www.daum.net" target="_blank">
+                <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" />
+            </a>
+        </div>
+    </div>
+    <div id="footer">
+        <h2>FOOTER</h2>
+
+    </div>
+</body>
+</html>
