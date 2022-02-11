@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function calc(){
+		var x = document.getElementById("x").value;
+		var y = document.getElementById("y").value;
+		var sum = parseInt(x)+parseInt(y);
+		document.getElementById("sum").value=sum;
+	}
+</script>
+</head>
+<body>
+	x : <input id="x"><br>
+	y : <input id="y"><br>
+	sum : <input id="sum"><br>
+	<input type="button" value="OK" onclick="calc()">
+</body>
+</html>

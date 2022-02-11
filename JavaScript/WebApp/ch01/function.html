@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function func1(name){
+		alert("Hello "+name);
+	}
+	function func2(name){
+		name=document.getElementById("name").value;
+		str = "hello " +name;
+		alert(str);
+	}
+</script>
+</head>
+<body>
+	<button onclick="func1('kim')">btn1</button><br>
+	Name : <input id="name">
+	<button onclick="func2()">btn2</button>
+</body>
+</html>

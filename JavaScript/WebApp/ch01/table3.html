@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function dan(){
+		x = document.getElementById("x").value;
+		message = "";
+		for(i=1;i<=9;i++){
+			message = message + "<br>" + x + "x" + i + "=" + x*i;
+		}
+		document.getElementById("p1").value=message;
+		document.getElementById("p2").innerHTML=message;
+		
+	}
+	
+</script>
+</head>
+<body>
+	<input id="x">
+	<input type="button" value="확인" onclick="dan()"><br>
+	<input id="p1">
+	<div id="p2"></div>
+</body>
+</html>
