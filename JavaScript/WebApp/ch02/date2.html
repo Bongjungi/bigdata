@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function checkDate(){
+		str_date = document.getElementById("date1").value;
+		document.write(str_date+ "<br>");
+		date1 = new Date(str_date);
+		document.write(date1 + "<br>");
+		document.write(date1.getTime() + "<br>");
+		var today = new Date();
+		document.write("time stamp : " + today.getTime() + "<br>");
+		var diff = today.getTime() - date1.getTime();
+		document.write(diff + "<br>");
+		document.write(diff / (1000*60*60*24) + "<br>");
+		var days = Math.floor(diff / (1000*60*60*24));
+		document.write(days + "<br>");
+		if (days>7){
+			alert("7일 초과");
+		}else {
+			alert("7일 이하");
+			
+		}
+	}
+</script>
+</head>
+<body>
+	date : <input type="date" id="date1">
+	<button onclick="checkDate()">OK</button>
+</body>
+</html>

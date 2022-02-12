@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	arr=[10,100,88,77,99,200];
+	arr.sort();
+	document.write(arr+"<br>");
+	
+	arr.sort(function(a,b){return a-b;});
+	document.write(arr+"<br>");
+	
+	arr.sort(function(a,b){return b-a;});
+	document.write(arr+"<br>");
+	
+	nums=[1,2,3,4,5,6,7,8,9,10];
+	arr2=nums.slice(5);
+	document.write(arr2+"<br>");
+	
+	arr3=nums.slice(5,8);
+	document.write(arr3+"<br>");
+	
+	result=nums.join(";");
+	document.write(typeof(nums)+"<br>");
+	document.write(typeof(result)+"<br>");
+	document.write(result+"<br>");
+	
+	result2=result.split(";");
+	document.write(result2+"<br>");
+	document.write(typeof(result2)+"<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

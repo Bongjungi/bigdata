@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function calc(){
+		var now = new Date();
+		var newYear = new Date(now.getFullYear() +1, 0, 1); //내년 1월 1일
+		var diff = newYear - now;
+		console.log(diff);
+		diff = diff / 1000;
+		var seconds = Math.floor(diff%60);
+		diff = diff / 60;
+		var minutes = Math.floor(diff%60);
+		diff = diff / 60;
+		var hours = Math.floor(diff%24);
+		diff = diff / 24;
+		var days = Math.floor(diff);
+		var str = "내년 1월1일까지 "+ days + "일, "
+		+ hours + "시간, " + minutes + "분, " + seconds
+		+ "초 남았습니다.";
+		document.getElementById("div1").innerHTML = str;
+		//setTimeout("calc()", 1000); //1000밀리세컨 후에 이 행동을 반복해라.
+	}
+	setInterval("calc()",1000);
+</script>
+</head>
+<body onload="calc()">
+	<div id="div1"></div>
+</body>
+</html>

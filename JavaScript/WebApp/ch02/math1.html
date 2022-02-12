@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function calc(n){
+		num = parseFloat(document.getElementById("num").value);
+		switch(n){
+			case 1 : result = Math.sin(num);break;
+			case 2 : result = Math.log(num);break;
+			case 3 : result = Math.sqrt(num);break;
+			case 4 : result = Math.abs(num);break;
+			//max(10,2,4),min,ceil,round,floor,random,PI
+		}
+		document.getElementById("result").value=result;
+	}
+	
+	
+</script>
+</head>
+<body>
+	num : <input id="num"><br>
+	result : <input id="result"><br>
+	<button onclick="calc(1)">SIN</button>
+	<button onclick="calc(2)">LOG</button>
+	<button onclick="calc(3)">SQRT</button>
+	<button onclick="calc(4)">ABS</button>
+</body>
+</html>

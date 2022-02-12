@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	str = "Java, javascript, java";
+	//문자열.match(/검색키워드/옵션)
+	//i : insensitive 대소문자 구분없이 검사
+	//g : global(전역검사)
+	result = str.match(/java/ig);
+	document.write(result+"<br>");
+	result = str.replaceAll("java","JAVA");
+	document.write(result+"<br>");
+	str = "one two three four five";
+	arr = str.split(" ");
+	document.write(arr + "<br>");
+	for(item in arr){
+		document.write(arr[item] + "<br>");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>
