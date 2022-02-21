@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var timer;
+	function msg(){
+		console.log("msg 함수 호출...");
+	}
+	function start(){
+		timer = setInterval("msg()", 1000);
+	}
+	function stop(){
+		clearInterval(timer);
+	}
+</script>
+</head>
+<body>
+	<button onclick="start()">start time</button>
+	<button onclick="stop()">stop time</button>
+</body>
+</html>
