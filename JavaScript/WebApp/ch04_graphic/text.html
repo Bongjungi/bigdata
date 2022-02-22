@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function init(){
+		canvas = document.getElementById("myCanvas");
+		context = canvas.getContext("2d");
+		context.font = "50px serif"; //폰트설정
+		context.strokeStyle = "blue"; //글자색
+		context.strokeText("Hello", 20, 100); //글자,x,y
+	}
+</script>
+</head>
+<body onload="init()">
+	<canvas id="myCanvas" width="300px" height="300px"></canvas>
+</body>
+</html>

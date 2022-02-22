@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function init(){
+		var canvas = document.getElementById("myCanvas"); //도화지
+		var context = canvas.getContext("2d"); //붓
+		context.fillStyle="yellow";
+		context.fillRect(10,10,100,50); // x,y,width,height 색깔있는사각형
+		context.rect(50,20,50,50); //색깔없는사각형
+		context.stroke(); // rect()는 이게 있어야 표현됨.
+	}
+</script>
+<style>
+	body{
+		margin:0;
+	}
+</style>
+</head>
+<body onload="init()">
+	<canvas id="myCanvas" width="200px" height="100px" style="border:1px solid red;"></canvas>
+</body>
+</html>
