@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		$("#button1").click(function(){
+			var name = $("#name").val(); //value를 읽어옴
+			alert(name);
+			name = prompt("name:","Kim");
+			$("#name").val(name);
+			$("#img1").attr("src","../images/tomato.jpg");
+			$("#img1").attr({
+				"width" : "300px",
+				"height" : "300px"
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	name : <input id="name" value=""><br>
+	<img id="img1" src="../images/tomato1.jpg"><br>
+	<button id="button1">OK</button>
+</body>
+</html>

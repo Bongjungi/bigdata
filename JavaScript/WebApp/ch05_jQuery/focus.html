@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		$("textarea").focus(function(){ //focus 얻을때
+			$(this).css("background-color","yellow");
+			$(this).css("border","3px dashed red");
+		});
+		$("textarea").blur(function(){ //focus 잃을때
+			$(this).css("background-color","white");
+			$(this).css("border","1px solid black");
+		});
+	});
+</script>
+</head>
+<body>
+	<textarea rows="3" cols="50"></textarea>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		$("img").bind({
+			mouseout : function(){
+				$("img").attr("src", "../images/tomato.jpg");
+				$("#div1").text("<h2>mouseout</h2>"); //html 해석 x
+				$("#div2").html("<h2>mouseout</h2>"); //html 해석 o
+			},
+			mouseover : function(){
+				$("img").attr("src", "../images/melon.png");
+				$("#div1").text("<h2>mouseover</h2>"); 
+				$("#div2").html("<h2>mouseover</h2>");
+			},
+			click : function(){
+				$("img").attr("src", "../images/grapes.png");
+				$("#div1").text("click");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="../images/tomato.jpg" width="20%" height="20%">
+	<br>
+	<div id="div1">div1</div>
+	<div id="div2">div2</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<script src="../include/jquery-3.6.0.min.js"></script>
+<script>
+	//$(function(){}); 자동실행 함수
+	$(function(){
+		$("h2").click(function(){
+			if(this.style.color=="red"){
+				$(this).css("color","black");
+			}else{
+				$(this).css("color","red");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>heading 1</h1>
+	<h2>heading 2</h2>
+</body>
+</html>

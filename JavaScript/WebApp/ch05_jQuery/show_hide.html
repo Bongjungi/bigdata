@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+//	show("slow"), show("fast")
+//	hide() 숨기기
+//	toggle() show,hide 반복
+//	animate() 애니메이션 효과
+//	stop()	애니메이션 중지
+//	fadeIn(), fadeOut(), slideUp(), slideDown()
+	$(function(){
+		$("#btn_show").click(function(){
+			$("#img1").show("slow");
+		});
+		console.log("slsl");
+		$("#btn_hide").click(function(){
+			$("#img1").hide("fast");
+		});
+		$("#btn_toggle").click(function(){
+			$("#img1").toggle("fast");
+		});
+		$("#btn_animate").click(function(){
+			$("#img1").animate({
+				width:"300px",
+				height:"200px",
+				opacity:"0.5"
+			}, 5000);
+		});
+		$("#btn_fadein").click(function(){
+			$("#img1").fadeIn(5000, function(){ //5초 동안  페이드인
+				$("#img2").fadeIn("slow");	//img1 페이드인 후 페이드인
+			});
+		});
+		$("#btn_fadeout").click(function(){
+			$("#img1").fadeOut("slow");
+			$("#img2").fadeOut("slow");
+		});
+		$("#btn_slidedown").click(function(){
+			$("#img1").slideDown("slow");
+		});
+		$("#btn_slideup").click(function(){
+			$("#img1").slideUp("slow");
+		});
+		$("#btn_chain").click(function(){
+			$("#img1").show().fadeOut("slow").slideDown("slow");
+		});
+	});
+	
+	
+</script>
+</head>
+<body>
+	<button id="btn_hide">hide</button>
+	<button id="btn_show">show</button>
+	<button id="btn_toggle">toggle</button>
+	<button id="btn_animate">animate</button>
+	<button id="btn_fadeout">fadeout</button>
+	<button id="btn_fadein">fadein</button>
+	<button id="btn_slideup">slideup</button>
+	<button id="btn_slidedown">slidedown</button>
+	<button id="btn_chain">chain</button>
+	<hr>
+	<img id="img2" src="../images/autumn.jpg" width="30%" height="30%">
+	<img id="img1" src="../images/tomato.jpg" width="30%" height="30%">
+	
+</body>
+</html>

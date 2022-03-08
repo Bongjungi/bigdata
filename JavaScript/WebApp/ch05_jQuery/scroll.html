@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		current = parseInt($("#div1").css("top")); // parseInt(100px) -> 100
+		$(window).scroll(function(){
+			pos = $(window).scrollTop(); //스크롤좌표
+			console.log(pos);
+			$("#div1").stop().animate(
+					{"top":pos+current+"px"},1000
+			);
+		});
+	});
+</script>
+<style>
+	#div1{
+		position: absolute;
+		width:200px;
+		top:100px;
+		right:100px;
+	}
+</style>
+</head>
+<body>
+	<h2>Menu</h2>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="div1">
+		<img src="../images/tomato.jpg" width="200px" height="200px">
+	</div>
+</body>
+</html>
