@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function winopen(){
+		num = document.getElementById("num").value;
+		//open(url,id,option)
+		window.open("multi_table_popup.jsp?num=" + num, "", "width=300,height=500");
+	}
+</script>
+</head>
+<body>
+	<form name="form1">
+		단을 입력하세요
+		<input type="text" id="num" value="3" size="10">
+		<input type="button" value="팝업창 열기" onclick="winopen()">
+	</form>
+</body>
+</html>

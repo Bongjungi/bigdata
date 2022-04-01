@@ -1,0 +1,15 @@
+	내장객체
+	request : 사용자의 요청을 처리하는 객체
+	response : 서버의 응답을 처리하는 객체
+	out : 웹브라우저에 출력 처리하는 객체
+	session : 사용자의 인증 정보를 저장하는 객체
+	application : 서버의 정보를 저장하는 객체
+	exception : 에러 처리 관련 객체
+	config : jsp의 환경정보를 처리하는 객체
+	page : 현재 페이지의 정보를 처리하는 객체
+	
+	사용범위
+	pageContext : 현재 페이지
+	request : 요청+응답페이지
+	session : 사용자 변수(로그인로그아웃)
+	application : 서버 변수(모든 사용자)

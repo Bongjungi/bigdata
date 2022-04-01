@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="select.jsp" method="post">
+		<select name="car">
+			<option value="bmw">BMW</option>
+			<option value="benz" selected>BENZ</option>
+			<option value="hyundai">Hyundai</option>
+			<option value="kia">Kia</option>
+		</select>
+		<input type="tel" name="tel" required pattern="[0-9]{2,3}-[0-9]{4}-[0-9]{4}" title="###-####-####">
+		<!-- 자바스크립트로 패턴지정하는게 나을듯. -->
+		<input type="submit" value="OK">
+	</form>
+</body>
+</html>
