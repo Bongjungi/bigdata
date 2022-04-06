@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<Resource name="oraDB" auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxTotal="50" maxIdle="10" maxWaitMillis="-1" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521/xe" username="scott" password="tiger"/>
+</Context>
